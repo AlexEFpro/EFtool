@@ -10,14 +10,38 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Logo_View()
+                .padding(.top,50)
+            Text("Planea de forma inteligente")
+                .font(.title)
+            
+            NavigationView{
+                
+                List{
+                    NavigationLink(destination:Planing_Form_View()){
+                        
+                        Label("Inicia a planear", systemImage: "list.clipboard")
+                            .font(.title)
+                    }
+                    
+                    NavigationLink(destination: FormContactView()){
+                        Label("Contacto", systemImage: "envelope")
+                            .font(.title)
+                        
+                        
+                    }
+                    
+                }
+                
+            }
+            Spacer()
         }
-        .padding()
+        
+        
     }
+    
 }
+
 
 #Preview {
     ContentView()

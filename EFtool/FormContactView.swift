@@ -9,7 +9,11 @@ import SwiftUI
 
 struct FormContactView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Form{
+                Text("Vista de formulario de contacto")
+            }
+        }
     }
 }
 
